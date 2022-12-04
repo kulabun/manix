@@ -136,6 +136,8 @@ fn main() -> Result<()> {
 
     let should_invalidate_cache = version != last_version;
 
+    // let should_invalidate_cache = true;
+
     let mut aggregate_source = AggregateDocSource::default();
 
     let mut comment_db = if !should_invalidate_cache && comment_cache_path.exists() {
